@@ -8,54 +8,37 @@
     <meta name="Description" content="Enter your description here" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
     <title>Github Repository Search</title>
 
     <style>
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 4px 6px 25px rgba(0, 0, 0, 0.65);
-        }
 
-        .card {
-            width: 100%;
-            transition: 0.3s;
-        }
-
-        h5 {
-            color: red;
-            text-justify: inter-cluster;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column
-        }
-
-        #result {
-            /* display: flex;
-            flex-wrap: wrap;
-            justify-content: center; */
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 5px;
-        }
-
-        .hideImage {
-            display: none;
-        }
-
-        .showImage {
-            display: block;
-        }
     </style>
 </head>
 
 <body class="bg-dark text-light">
 
-    <h1 class="text-center display-4 p-5 shadow">Welcome to Search in Github</h1>
+    <h1 class="text-center display-4 p-5 shadow">Welcome to Github Search Engine</h1>
 
 
     <section class="container p-5 text-center">
+        <div class="d-flex justify-content-around">
+            <div class="d-flex">
+                <p class="mr-3 p-1">Row Mode</p>
+                <label class="switch">
+                    <input id="slide" type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="d-flex">
+                <p id="lable" class="mr-3 p-1">Hide Avatar </p>
+                <label class="switch">
+                    <input type="checkbox" name="check" id="check">
+                    <span class="slider round" id="lable" for="check"></span>
+                </label>
+            </div>
+        </div>
+
         <form id="form">
 
             <div class="d-flex">
@@ -63,16 +46,12 @@
                 <button id="btn" class="btn btn-primary ">Search</button>
             </div>
 
-            <div>
-                <label id="lable" for="check">View Avatar</label>
-                <input type="checkbox" name="check" id="check">
-            </div>
         </form>
 
     </section>
 
     <h1 id="owner"></h1>
-    <section class="container" id="result"></section>
+    <section class="container " id="result"></section>
 
 
 

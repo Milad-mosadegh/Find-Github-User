@@ -17,8 +17,13 @@
 
         }
 
-        img {
+        /* img {
             display: none;
+        } */
+
+        form {
+            display: flex;
+            flex-direction: column
         }
 
         #result {
@@ -28,11 +33,11 @@
             gap: 5px;
         }
 
-        .dis {
+        .hideImage {
             display: none;
         }
 
-        .blo {
+        .showImage {
             display: block;
         }
     </style>
@@ -44,12 +49,17 @@
 
 
     <section class="container p-5 text-center">
-        <form id="form" class="d-flex">
-            <input id="search" class="form-control" type="text" placeholder="Insert your repository name ">
-            <button class="btn btn-primary ">Search</button>
+        <form id="form">
 
-            <label id="lable" for="check">View Avatar</label>
-            <input type="checkbox" name="check" id="check">
+            <div class="d-flex">
+                <input id="search" class="form-control" type="text" placeholder="Insert your repository name ">
+                <button id="btn" class="btn btn-primary ">Search</button>
+            </div>
+
+            <div>
+                <label id="lable" for="check">View Avatar</label>
+                <input type="checkbox" name="check" id="check">
+            </div>
         </form>
 
     </section>

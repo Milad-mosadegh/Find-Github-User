@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Github Repository Search</title>
+
+    <style>
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 4px 5px 10px black;
+
+        }
+
+        img {
+            display: none;
+        }
+
+        #result {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .dis {
+            display: none;
+        }
+
+        .blo {
+            display: block;
+        }
+    </style>
+</head>
+
+<body class="bg-dark text-light">
+
+    <h1 class="text-center display-4 p-5 shadow">Welcome to Search in Github</h1>
+
+
+    <section class="container p-5 text-center">
+        <form id="form" class="d-flex">
+            <input id="search" class="form-control" type="text" placeholder="Insert your repository name ">
+            <button class="btn btn-primary ">Search</button>
+
+            <label id="lable" for="check">View Avatar</label>
+            <input type="checkbox" name="check" id="check">
+        </form>
+
+    </section>
+
+    <h1 id="owner"></h1>
+    <section class="container" id="result"></section>
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>
